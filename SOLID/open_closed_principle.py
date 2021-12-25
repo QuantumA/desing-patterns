@@ -71,15 +71,6 @@ class SizeSpecification(Specification):
         return item.size == self.size
 
 
-# class AndSpecification(Specification):
-#     def __init__(self, spec1, spec2):
-#         self.spec2 = spec2
-#         self.spec1 = spec1
-#
-#     def is_satisfied(self, item):
-#         return self.spec1.is_satisfied(item) and \
-#                self.spec2.is_satisfied(item)
-
 class AndSpecification(Specification):
     def __init__(self, *args):
         self.args = args
