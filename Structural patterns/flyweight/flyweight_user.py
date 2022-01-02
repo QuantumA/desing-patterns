@@ -26,19 +26,11 @@ def random_string():
 
 
 if __name__=="__main__":
-    # users = []
+
 
     first_names = [random_string() for x in range(100)]
     last_names = [random_string() for x in range(100)]
 
-    # for first in first_names:
-    #     for last in last_names:
-    #         users.append(UserFlyWeight(f'{first} {last}'))
-            
-    
-    # [print(str(user)) for user in users]
-    # print(len(users))
-    
     u2 = UserFlyWeight('Jim Jones')
     u3 = UserFlyWeight('Frank Jones')
     print(u2.names)

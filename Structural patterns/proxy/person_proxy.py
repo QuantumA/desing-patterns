@@ -18,19 +18,23 @@ class ResponsiblePerson:
     @property
     def age(self):
         return self.person.age
+    
+    @age.setter
+    def age(self, value):
+        self.person.age = value
 
 
     def drink(self):
-        if self.person.age < 18:
+        if self.age < 18:
             return "too young"
             
-        self.person.drink()
+        return self.person.drink()
 
     def drive(self):
-        if self.person.age < 1:
+        if self.age < 16:
             return "too young"
             
-        self.person.drive()
+        return self.person.drive()
 
     def drink_and_drive(self):
         return "dead"
